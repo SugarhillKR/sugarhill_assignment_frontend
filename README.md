@@ -22,8 +22,9 @@
    a. 댓글이 시간순으로 정렬이 안되고 있어요.
    b. "최신순" 정렬 기능을 추가해 주세요.
    c. 콘솔창을 확인하고 에러를 수정해주세요.
-   d. Comment.js 컴포넌트에 호버시 2가지 메뉴가 보이게 해주세요. (기능은 없습니다.) ([이미지 참고](https://github.com/SugarhillKR/NemoReact/assets/104344266/3d80d657-dc22-4553-bb4b-ea6994f3fcec))
-
+   d. Comment.js 컴포넌트에 호버시 2가지 메뉴가 보이게 해주세요. (기능은 없습니다.)
+   [이미지 참고]
+   ![sample_img](https://github.com/SugarhillKR/sugarhill_assignment_frontend/assets/133742699/600d678f-180c-4054-9cbd-ca695b602e84)
 2. 댓글 입력기능 만들기
    a. postComment를 이용해서 댓글 입력 기능을 만들어주세요. (엔터를 쳤을때 등록이 되면 좋겠어요.)
    b. 콘솔창을 확인하고 에러를 수정해주세요.
