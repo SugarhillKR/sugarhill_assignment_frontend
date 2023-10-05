@@ -24,11 +24,11 @@
    b. "최신순" 정렬 기능을 추가해 주세요.<br/>
    c. 콘솔창을 확인하고 에러를 수정해주세요.<br/>
    d. 코드를 어떻게 리팩토링 하면 좋을지 고민해 주세요.<br/>
-   d. Comment.js 컴포넌트에 호버시 2가지 메뉴가 보이게 해주세요. (기능은 없습니다.)<br/>
-   <br/>[이미지 참고]
-     <!-- ![sample_img](https://github.com/SugarhillKR/sugarhill_assignment_frontend/assets/133742699/600d678f-180c-4054-9cbd-ca695b602e84)
-     <br/> -->
-     <br/>
+    <!-- d. Comment.js 컴포넌트에 호버시 2가지 메뉴가 보이게 해주세요. (기능은 없습니다.)<br/>
+    <br/>[이미지 참고]
+      ![sample_img](https://github.com/SugarhillKR/sugarhill_assignment_frontend/assets/133742699/600d678f-180c-4054-9cbd-ca695b602e84)
+      <br/> -->
+      <br/>
 
 <!-- 2. 댓글 입력기능 만들기<br/>
    a. postComment를 이용해서 댓글 입력 기능을 만들어주세요. (엔터를 쳤을때 등록이 되면 좋겠어요.)<br/>
