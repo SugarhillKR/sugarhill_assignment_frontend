@@ -11,7 +11,7 @@
 const dummyData = [
     {
         userId: 1,
-        memoId: 1223534,
+        memoId: 1,
         userName: '전경민',
         memo: '1. 담당 중개사가 변경되었습니다. 강명수 > 유진무',
         isLike: false,
@@ -19,7 +19,7 @@ const dummyData = [
     },
     {
         userId: 0,
-        memoId: 21534524,
+        memoId: 2,
         userName: '시스템',
         memo: '4. 담당 중개사가 배정되었습니다: 강명수',
         isLike: false,
@@ -27,7 +27,7 @@ const dummyData = [
     },
     {
         userId: 1,
-        memoId: 2152414,
+        memoId: 3,
         userName: '전경민',
         memo: '2. 담당 중개사가 변경되었습니다. 유진무 > 김지인',
         isLike: false,
@@ -35,7 +35,7 @@ const dummyData = [
     },
     {
         userId: 2,
-        memoId: 45745634,
+        memoId: 4,
         userName: '유진무',
         memo: '7. 콜백 상태가 저장되었습니다: 성공',
         isLike: false,
@@ -43,7 +43,7 @@ const dummyData = [
     },
     {
         userId: 3,
-        memoId: 3452345,
+        memoId: 5,
         userName: '김지인',
         memo: '3. 미팅 상태가 저장되었습니다: 진행중',
         isLike: false,
@@ -51,7 +51,7 @@ const dummyData = [
     },
     {
         userId: 2,
-        memoId: 874567,
+        memoId: 6,
         userName: '유진무',
         memo: '5. 매물 제안 상태가 저장되었습니다: 성공',
         isLike: false,
@@ -59,7 +59,7 @@ const dummyData = [
     },
     {
         userId: 3,
-        memoId: 456454635,
+        memoId: 7,
         userName: '김지인',
         memo: '6. 콜백 상태가 저장되었습니다: 성공',
         isLike: false,
@@ -85,21 +85,23 @@ export const getComments = () => {
  * createdDateUtc: string;
  */
 export const postComment = (payload) => {
-    const userId = 100;
-    const memoId = Math.random().toString();
-    const isLike = false;
+    const userId = 100
+    const memoId = Math.random().toString()
+    const isLike = false
     const random = Math.random()
     const errorPercentage = 0.01 // ** 이 mock api는 에러가 발생합니다. **//
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(typeof payload !== 'object') reject ('400 Bad Request error')
-            if (typeof payload.memo !== 'string' || payload.memo === '') reject('400 Bad Request error')
-            if (typeof payload.createdDateUtc !== 'string') reject('400 Bad Request error')
+            if (typeof payload !== 'object') reject('400 Bad Request error')
+            if (typeof payload.memo !== 'string' || payload.memo === '')
+                reject('400 Bad Request error')
+            if (typeof payload.createdDateUtc !== 'string')
+                reject('400 Bad Request error')
             if (random < errorPercentage) reject('500 mock error')
             else {
-                payload.userId = userId;
-                payload.memoId = memoId;
-                payload.isLike = isLike;
+                payload.userId = userId
+                payload.memoId = memoId
+                payload.isLike = isLike
                 dummyData.push(payload)
                 resolve('200 post comment success')
             }
@@ -118,8 +120,8 @@ export const putCommentLike = (payload) => {
     const errorPercentage = 0.01 // ** 이 mock api는 에러가 발생합니다. **//
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(typeof isLike !== 'boolean') reject('400 Bad request error')
-            if(typeof memoId !== 'number') reject('400 Bad request error')
+            if (typeof isLike !== 'boolean') reject('400 Bad request error')
+            if (typeof memoId !== 'number') reject('400 Bad request error')
             const target = dummyData.findIndex((data) => data.memoId === memoId)
             if (typeof target !== 'number') reject('500 there is no memo')
             dummyData[target].isLike = isLike

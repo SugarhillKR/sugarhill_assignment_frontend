@@ -22,10 +22,9 @@ function App() {
 
     const SortComments = (originComments) => {
         switch (sortType) {
-            case 'descend':
+            case 'descend': // 내림차순
                 return
-            case 'ascend':
-                console.log(originComments)
+            case 'ascend': // 오름차순
             default:
                 const ascendComments = originComments
                 setComments(ascendComments)
